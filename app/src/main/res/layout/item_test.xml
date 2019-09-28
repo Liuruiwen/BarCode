@@ -13,7 +13,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@mipmap/car"
+        android:scaleType="centerCrop"
         android:id="@+id/iv_goods"
         app:layout_constraintDimensionRatio="1:1"
         />
@@ -23,7 +23,7 @@
         android:background="#ff0000"
         android:padding="5dp"
         android:id="@+id/tv_mark"
-        android:text="这可是一辆超级跑车"
+        android:text="这个娃娃坏的很"
         android:textSize="14sp"
         android:textColor="#fff"
         app:layout_constraintBottom_toBottomOf="@id/iv_goods"
