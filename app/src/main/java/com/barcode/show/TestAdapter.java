@@ -1,5 +1,8 @@
 package com.barcode.show;
 
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.RelativeSizeSpan;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -23,7 +26,8 @@ public class TestAdapter extends BaseQuickAdapter<String,BaseViewHolder>{
 
     @Override
     protected void convert(BaseViewHolder helper, String item) {
-        helper.setText(R.id.tv_price,String.format("￥%1.2f",2666.0));
+//        helper.setText(R.id.tv_price,String.format("￥%1$s",changMoneySize("2666.00")));
+        helper.setText(R.id.tv_price,changMoneySize(String.format("￥%1.2f",26666.0)));
 
 
         RequestOptions roundOptions = new RequestOptions()
@@ -36,5 +40,18 @@ public class TestAdapter extends BaseQuickAdapter<String,BaseViewHolder>{
                 .into((ImageView) helper.getView(R.id.iv_goods));
 
 
+    }
+
+    /**
+     * 改变小数点大小
+     * @param value
+     * @return
+     */
+    public  SpannableString changMoneySize(String value) {
+        SpannableString spannableString = new SpannableString(value);
+        if (value.contains(".")) {
+            spannableString.setSpan(new RelativeSizeSpan(0.6f), value.indexOf("."), value.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        }
+        return spannableString;
     }
 }
