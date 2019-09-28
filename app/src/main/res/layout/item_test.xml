@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="2dp"
+    android:paddingBottom="8dp"
+    android:layout_marginRight="2dp"
+    android:background="@drawable/shape_bg_write"
+    >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@mipmap/car"
+        android:id="@+id/iv_goods"
+        app:layout_constraintDimensionRatio="1:1"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff0000"
+        android:padding="5dp"
+        android:id="@+id/tv_mark"
+        android:text="这可是一辆超级跑车"
+        android:textSize="14sp"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="@id/iv_goods"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        android:maxLines="2"
+        android:id="@+id/tv_content"
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"
+        android:ellipsize="end"
+        app:layout_constraintTop_toBottomOf="@id/iv_goods"
+        android:text="我宁愿当一个丑八怪积极又可爱长得丑活得久长得胖 日子旺我宁愿做一个平凡的人"
+        android:layout_height="wrap_content" />
+
+      <TextView
+          android:paddingLeft="8dp"
+          app:layout_constraintTop_toBottomOf="@id/tv_content"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:id="@+id/tv_price"
+           android:text="￥266666.00"
+          android:textSize="14sp"
+          android:textStyle="bold"
+          app:layout_constraintBaseline_toBaselineOf="@id/tv_describe"
+          android:layout_marginTop="15dp"
+          android:textColor="#ff0000"
+          />
+
+    <TextView
+        app:layout_constraintLeft_toRightOf="@id/tv_price"
+        app:layout_constraintTop_toBottomOf="@id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_describe"
+        android:text="秒杀"
+        android:textSize="8sp"
+        android:layout_marginLeft="5dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp"
+        android:background="@drawable/shape_border_red"
+        android:layout_marginTop="15dp"
+        android:textColor="#ff0000"
+        />
+
+    <TextView
+        android:layout_marginRight="18dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#666666"
+        android:gravity="right"
+        android:textSize="8sp"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_describe"
+        android:text="看相似"
+       android:padding="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/shape_border_gray"
+        app:layout_constraintLeft_toRightOf="@id/tv_describe"
+        app:layout_constraintTop_toBottomOf="@id/tv_content"
+        />
+
+
+
+
+</android.support.constraint.ConstraintLayout>
